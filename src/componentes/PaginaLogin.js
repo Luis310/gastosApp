@@ -7,12 +7,12 @@ export const PaginaLogin = () => {
     const dispatch = useDispatch();
 
     return(
-        <div>
+        <div className="box-layout">
     
-        <div >
-        <h1 >App gastos</h1>
+        <div className="box-layout__box">
+        <h1 className="box-layout__title" >App gastos</h1>
         <p>Administra tus gastos</p>
-        <button onClick={dispatch(inicioLogin)}>Login con Google</button>
+        <button onClick={dispatch(inicioLogin)} className="button">Login con Google</button>
         </div>
                 
         </div>

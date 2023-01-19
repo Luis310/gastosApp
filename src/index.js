@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import configStore from './store/configStore';
 import './firebase/firebase';
+import 'normalize.css/normalize.css'
+import './estilos/estilos.scss';
 import PaginaCarga from './componentes/PaginaCarga';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { login, logout } from './acciones/autenticacion';
