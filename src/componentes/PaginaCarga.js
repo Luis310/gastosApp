@@ -1,8 +1,8 @@
 import React from 'react';
 
 const PaginaCarga = () => (
-    <div >
-        <img src="/images/loader.gif"></img>
+    <div className="loader">
+        <img className="loader__image" src="/images/loader.gif"></img>
     </div>
 );
 
