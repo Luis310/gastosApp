@@ -19,7 +19,7 @@ const ElementoLista = ({ descripcion, cantidad, creado, id }) => {
     
 
     return (
-        <div className="content-container">
+        <div >
         {/* Enlace para redigirnos a la pagina edición por medio del ID */}
             <Link className="list-item" to={`/edicion/${id}`}>
             <div>
