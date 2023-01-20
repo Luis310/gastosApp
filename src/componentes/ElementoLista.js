@@ -19,7 +19,7 @@ const ElementoLista = ({ descripcion, cantidad, creado, id }) => {
     
 
     return (
-        <div>
+        <div className="content-container">
         {/* Enlace para redigirnos a la pagina edición por medio del ID */}
             <Link className="list-item" to={`/edicion/${id}`}>
             <div>
@@ -27,13 +27,13 @@ const ElementoLista = ({ descripcion, cantidad, creado, id }) => {
             <span className="list-item__subtitle" >Creado el: {moment(creado).format('DD MMMM YYYY')}</span>
             </div>
             <h3 className="list-item__data">Cantidad: Q {numeral(cantidad/100).format('0,0.00')}</h3>
-            {/* Aqui se utiliza el método onClick, es decir,
+            </Link>
+        {/* Aqui se utiliza el método onClick, es decir,
                 al dar click al botón "Remover" haremos la llamada al hook "dispatch"
                 con la acción "quitarGasto" por medio del id */}
                 <button className="button--remove" onClick={() => {
                 dispatch(inicioQuitarGasto({ id }))
             }}>Remover</button>
-            </Link>
         </div>
     );
 };
