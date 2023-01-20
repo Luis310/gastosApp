@@ -5,17 +5,32 @@ import ElementoLista from './ElementoLista';
 import SeleccionadorGastos from '../seleccionador/gastos';
 
 const ListaDeGastos = (props)=>(
-    <div>
-        <h1>Lista de Gastos</h1>
+    <div className="content-container">
+    <div className="list-header">
+        <h1>Gasto</h1>
         <h2>Cantidad de gastos: {props.gastos.length}</h2>
-           {
-               //AQUI REGRESAMOS UN NUEVO ARREGLO CON INSTANCIAS DEL ELEMENTO LISTA
+    </div>
+        <div className="list-body">
+            {
+                props.gastos.length === 0 ?
+
+                    (
+                        <div className="list-item list-item--message">
+                            <span>No hay gastos registrados</span>
+                        </div>
+                    )
+                    :
+
+                    (
+                        //AQUI REGRESAMOS UN NUEVO ARREGLO CON INSTANCIAS DEL ELEMENTO LISTA
                props.gastos.map((gasto,index)=>{
                    //SE UTILIZA EL OPERADOR "SPREAD" PARA ITERAR SOBRE LOS ELEMENTOS DE CADA GASTO
                    //ES DECIR: "Descripcion", "cantidad", "nota", entre otros. 
                   return <ElementoLista key={gasto.id}{...gasto} />
                })
-           }
+                    )
+            }
+        </div>
     </div>
 )
 

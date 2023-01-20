@@ -79,18 +79,20 @@ export default class FormularioGasto extends React.Component {
     render() {
         return (
             <div>
-                {this.state.error && <p>{this.state.error}</p>}
-                <form onSubmit={this.agregarGasto}>
+                {this.state.error && <p className="form__error">{this.state.error}</p>}
+                <form className="form" onSubmit={this.agregarGasto}>
                     <input
                         type='text'
                         placeholder='Descripción'
                         autoFocus
+                        className="text-input"
                         value={this.state.descripcion}
                         onChange={this.verificadorDescripcion}
                     />
                     <input
                         type='text'
                         placeholder='Cantidad'
+                        className="text-input"
                         value={this.state.cantidad}
                         onChange={this.verificadorCantidad}
                     />
@@ -100,11 +102,12 @@ export default class FormularioGasto extends React.Component {
                     />
                     <textarea
                         placeholder='Agrega una nota para el gasto (opcional)'
+                        className="textarea"
                         value={this.state.nota}
                         onChange={this.verificadorNota}
                     >
                     </textarea>
-                    <button>Agregar gasto</button>
+                    <button className="button">Agregar gasto</button>
                 </form>
             </div>
         )

@@ -25,13 +25,29 @@ export const ListaFiltros = () => {
     }
 
     return (
-        <div>
-            <input type='text' value={filtros.texto} onChange={verificarCambios}></input>
-
-            <select value={filtros.ordenarPor} onChange={verificarOrdenamiento}>
+        <div className="content-container">
+        <div className="input-group">
+        <div className="input-group__item">
+        <input 
+        className="text-input"
+        type='text' 
+        placeholder="Buscar gastos" 
+        value={filtros.texto} 
+        onChange={verificarCambios}>
+        </input>
+        </div>
+        
+        
+        <div className="input-group__item">
+        <select 
+        className="select"
+        value={filtros.ordenarPor} 
+        onChange={verificarOrdenamiento}>
                 <option value="fecha">Fecha</option>
                 <option value="cantidad">Cantidad</option>
             </select>
+            </div>
+        </div>
         </div>
     );
 }

@@ -4,7 +4,9 @@ import {ListaFiltros} from './ListaFiltros';
 
 const DashboardGastos=()=>(
     <div>
-    <h1>DASHBOARD PRINCIPAL DE GASTOS</h1>
+    <div className="content-container">
+    <h1>Dashboard de gastos</h1>
+    </div>
     <ListaFiltros/>
     <ListaDeGastos />
     </div>

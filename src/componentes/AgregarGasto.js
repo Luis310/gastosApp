@@ -15,7 +15,12 @@ export const AgregarGasto = () => {
 
     return (
         <div>
-            <h1>Agregando gastos</h1>
+        <div className="page-header">
+        <div className= "content-container">
+            <h1 className="page-header__title">Agregando gastos</h1>
+            </div>
+            </div>
+            <div className="content-container">
             <FormularioGasto
                 agregarGasto={(gasto) => {
                     console.log(gasto);
@@ -26,6 +31,7 @@ export const AgregarGasto = () => {
                 }
                 }
             />
+            </div>
         </div>
     );
 }
