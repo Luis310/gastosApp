@@ -14,6 +14,12 @@ export const EditarGasto = (props) => {
     const history = useHistory();
     return (
         <div>
+                <div className="page-header">
+                    <div className="content-container">
+                        <h1 className="page-header__title">Editar gasto</h1>
+                    </div>
+                </div>
+        <div className="content-container">
             <FormularioGasto
                 gasto={gastoStore}
                 agregarGasto={(gasto) => {
@@ -22,6 +28,7 @@ export const EditarGasto = (props) => {
                 }
                 }
             />
+        </div>
         </div>
     )
 }
